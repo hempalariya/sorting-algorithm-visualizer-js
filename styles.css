@@ -1,0 +1,14 @@
+.grid {
+  display: flex;
+  gap: 5px;
+  align-items: flex-end;
+  min-height: 200px;
+}
+
+.box {
+  width: 15px;
+  background: steelblue;
+  color: white;
+  text-align: center;
+}
+
