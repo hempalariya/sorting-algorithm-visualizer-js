@@ -7,6 +7,7 @@ function generateArray(size = 10){
     // selectionSort(array);
     // insertionSort(array);
     // mergeSort(array)
+    // quickSort(array)
 }
 
 generateArray(10);
@@ -165,3 +166,28 @@ async function merge(left, right) {
 
     return result;
 }
+
+
+function quickSort(arr){
+
+    if(arr.length <= 1) {
+        return arr
+    }
+
+    let pivot = arr[arr.length - 1]
+    let left = []
+    let right = []
+
+    for(let i = 0; i < arr.length - 1; i++){
+        if(arr[i] < pivot) {
+            left.push(arr[i])
+        }else{
+            right.push(arr[i])
+        }
+    }
+    
+    return [...quickSort(left), pivot, ...quickSort(right)]
+}
+
+
+
